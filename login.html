@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Portal Sekolah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Portal Sekolah</a>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <form id="loginForm" class="card form-card" aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Masuk ke Dashboard</h2>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="admin@example.com" required />
+
+      <label for="password">Kata sandi</label>
+      <input id="password" type="password" minlength="6" required />
+
+      <div class="form-row">
+        <button type="submit" class="btn">Login</button>
+        <button type="button" id="demoBtn" class="btn ghost">Demo Login</button>
+      </div>
+
+      <p class="muted">Demo credentials: <code>admin@example.com / password123</code></p>
+      <p id="loginMsg" class="muted"></p>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

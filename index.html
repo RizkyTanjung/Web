@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Info Sekolah — Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Portal Sekolah</a>
+      <nav>
+        <a href="login.html" class="btn small">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Info Sekolah — Bisa diganti kapan saja</h1>
+      <p>Daftar sekolah, kontak, kurikulum, jam pelajaran, dan keterangan lain — edit lewat dashboard setelah login.</p>
+    </section>
+
+    <section class="controls">
+      <label for="schoolSelect">Pilih sekolah:</label>
+      <select id="schoolSelect"></select>
+      <button id="refreshBtn" class="btn">Refresh</button>
+    </section>
+
+    <section id="cards" class="cards-grid" aria-live="polite"></section>
+
+    <section class="footer-note">
+      <small>Mode demo: jika tidak ada backend, data disimpan di browser (localStorage). Untuk simpan permanen, hubungkan ke API.</small>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

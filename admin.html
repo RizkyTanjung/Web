@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Admin — Portal Sekolah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Portal Sekolah</a>
+      <nav>
+        <button id="logoutBtn" class="btn small ghost">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card" aria-labelledby="dashTitle">
+      <h2 id="dashTitle">Dashboard — Kelola Sekolah</h2>
+
+      <div class="form-row">
+        <label for="selectSchool">Pilih sekolah</label>
+        <select id="selectSchool"></select>
+        <button id="newSchoolBtn" class="btn ghost">+ Baru</button>
+      </div>
+
+      <form id="schoolForm">
+        <label for="name">Nama Sekolah</label>
+        <input id="name" required />
+
+        <label for="address">Alamat</label>
+        <input id="address" />
+
+        <label for="phone">Telepon</label>
+        <input id="phone" />
+
+        <label for="vision">Visi singkat</label>
+        <input id="vision" />
+
+        <label for="mission">Misi (pisah baris dengan | )</label>
+        <textarea id="mission"></textarea>
+
+        <label for="logo">Logo (preview)</label>
+        <input id="logoInput" type="file" accept="image/*" />
+        <img id="logoPreview" alt="Logo preview" style="max-width:120px;display:block;margin:8px 0" />
+
+        <div class="form-row">
+          <button type="submit" class="btn">Simpan</button>
+          <button id="deleteBtn" type="button" class="btn ghost">Hapus</button>
+        </div>
+
+        <p id="saveMsg" class="muted"></p>
+      </form>
+    </section>
+    <section class="card">
+      <h3>Preview Publik</h3>
+      <div id="previewPublic"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
